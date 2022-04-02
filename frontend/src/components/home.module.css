@@ -1,0 +1,50 @@
+.homeMain {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+}
+
+.homeMain2 {
+    padding: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    text-align: center;
+}
+
+.title {
+    color:darkcyan;
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.author {
+    color: palevioletred;
+    font-weight: bold;
+    padding-bottom: 10px;
+
+}
+
+.deletebtn {
+    padding: 10px 100px;
+    margin-top: 30px;
+}
+.forflex {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 40px
+
+}
+.login {
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    border: 1px solid black;
+    padding: 10px 70px;
+}

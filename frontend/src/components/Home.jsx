@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import styles from "./home.module.css"
 
 export const Home = () => {
 	const [books, setBooks] = useState([]);
@@ -23,23 +24,27 @@ export const Home = () => {
 	};
 
 	return (
-		<div>
+		<div className={styles.homeMain}>
 			{books.map((el) => {
 				return (
-					<div key={el._id}>
-						<div>{el.title}</div>
-						<div>{el.author_id.name}</div>
+					<div className={styles.homeMain2} key={el._id}>
 						<div>
-							<img
-								style={{ height: "200px", width: "150px" }}
-								src={el.book_front_image_url}
-								alt=""
-							/>
-						</div>
+							<div className={styles.title}>{el.title}</div>
+							<div className={styles.author}>
+								{el.author_id.name}
+							</div>
+							<div>
+								<img
+									style={{ height: "300px", width: "100%" }}
+									src={el.book_front_image_url}
+									alt=""
+								/>
+							</div>
 
-						<button onClick={() => handleDelete(el._id)}>
-							Delete
-						</button>
+							<button className={styles.deletebtn} onClick={() => handleDelete(el._id)}>
+								Delete
+							</button>
+						</div>
 					</div>
 				);
 			})}
